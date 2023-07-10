@@ -61,6 +61,18 @@
               {{ getSlideText() }}
             </p>
           </div>
+          <div class="featured-btn-container text-center">
+            <q-btn
+              no-caps
+              v-for="button in buttons"
+              :key="button.label"
+              :icon="button.icon"
+              :label="button.label"
+              flat
+              size="25px"
+              class="text-white q-pa-md"
+            />
+          </div>
         </div>
       </div>
     </div>

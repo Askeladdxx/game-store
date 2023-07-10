@@ -39,7 +39,13 @@ export default {
   data() {
     return {
       navbtns: ["Discover", "Browse", "Wishlist", "Cart"],
+      buttons: [
+        { icon: 'library_add', label: 'Wishlist' },
+        { icon: 'shopping_cart', label: 'Add to cart' },
+      
+      ]
     };
+    
   },
   methods: {
     handleNavButtonClick(button) {
