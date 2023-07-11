@@ -2,7 +2,7 @@
   <section>
     <div class="navbar row justify-between q-mx-lg q-pa-xs">
       <div class="flex flex-center">
-        <a class="logo-title text-white text-bold" href="/">bot</a>
+        <a class="logo-title text-bold" href="/">bot</a>
       </div>
       <div class="flex flex-center">
         <div v-for="(navbtns, index) in navbtns" :key="index" class="q-mx-sm">
@@ -10,7 +10,7 @@
             dense
             no-caps
             flat
-            class="btn-navbar q-pa-xs text-white text-bold"
+            class="btn-navbar q-pa-xs text-bold"
             size="20px"
           >
             {{ navbtns }}
@@ -53,15 +53,15 @@
 
           <div class="text-container col-12 col-md-5 q-pa-md">
             <div>
-              <h5 class="text-title text-white text-center q-mb-sm">
+              <h5 class="text-title text-center q-mb-sm">
                 {{ getSlideContent().title }}
               </h5>
-              <h5 class="text-price text-white text-center q-mt-md">
+              <h5 class="text-price text-center q-mt-md">
                 {{ getSlideContent().price }}
               </h5>
             </div>
             <div class="q-mx-sm">
-              <p class="content-text text-justify text-white">
+              <p class="content-text text-justify">
                 {{ getSlideContent().text }}
               </p>
             </div>
@@ -75,7 +75,7 @@
                 flat
                 rounded
                 size="20px"
-                class="text-white q-pa-md"
+                class="q-pa-md"
               />
             </div>
           </div>
@@ -86,33 +86,33 @@
   <section>
     <div class="sec-2">
       <div class="q-pa-sm q-mx-md">
-        <h4 class="text-white q-mb-none q-mt-sm">Games on Sale</h4>
+        <h4 class="q-mb-none q-mt-sm">Games on Sale</h4>
       </div>
       <div class="card-container row justify-evenly">
         <q-card
-          class="my-card q-pa-md"
+          class="my-card q-pa-md column justify-evenly q-mb-md"
           v-for="card in cards"
           :key="card.id"
-          flat
+          dense
         >
           <q-img class="card-image" :src="card.image" />
-          <q-card-section class="q-pb-none">
-            <q-card-title class="card-title text-white">
+          <q-card-section class="q-py-sm q-px-none">
+            <q-card-title class="card-title">
               {{ card.title }}
             </q-card-title>
           </q-card-section>
-          <q-card-section class="card-price q-mx-md q-pa-none text-white">
+          <q-card-section class="card-price q-pa-none">
             {{ card.price }}
           </q-card-section>
-          <q-card-section class="q-mb-md">
-            <q-card-text class="text-white">
+          <q-card-section class="q-py-xs q-pl-none">
+            <q-card-text class="">
               {{ card.developer }}
             </q-card-text>
           </q-card-section>
         </q-card>
       </div>
-      <div class="free-container q-pa-sm q-mx-md q-ma-sm">
-        <h5 class="text-white q-mx-md q-my-sm">
+      <div class="free-container q-mx-xl q-pa-sm q-ma-xl">
+        <h5 class="q-mx-md q-my-sm">
           <q-icon name="redeem" size="2rem" class="q-px-md q-mb-none" />Free
           games on
           <b>bot</b>
@@ -127,15 +127,15 @@
           >
             <q-img class="free-card-image" :src="card.image" />
             <q-card-section class="q-pa-md">
-              <q-card-title class="card-title text-white">
+              <q-card-title class="card-title">
                 {{ card.title }}
               </q-card-title>
             </q-card-section>
-            <q-card-section class="card-price q-mx-md q-pa-none text-white">
+            <q-card-section class="card-price q-mx-md q-pa-none">
               {{ card.price }}
             </q-card-section>
             <q-card-section class="q-mb-md">
-              <q-card-text class="text-white q-py-none">
+              <q-card-text class="q-py-none">
                 {{ card.developer }}
               </q-card-text>
             </q-card-section>
@@ -152,20 +152,15 @@
             v-model="tab"
             align="justify"
             narrow-indicator
-            class="q-mb-lg"
+            class="q-mb-lg text-lg"
           >
             <q-tab
               no-caps
-              class="text-white"
+              class="text-lg"
               name="popularRelease"
               label="Popular New Releases"
             />
-            <q-tab
-              class="text-white"
-              name="upcoming"
-              label="Upcoming"
-              no-caps
-            />
+            <q-tab class="text-lg" name="upcoming" label="Upcoming" no-caps />
           </q-tabs>
 
           <div class="q-gutter-y-sm">
@@ -174,29 +169,27 @@
               animated
               transition-prev="scale"
               transition-next="scale"
-              class="tab-panel-container text-white"
+              class="tab-panel-container"
             >
               <q-tab-panel name="popularRelease">
                 <div class="card-container row justify-evenly">
                   <q-card
-                    class="tab-card"
+                    class="tab-card q-pa-md column justify-evenly q-mb-md"
                     v-for="card in cards"
                     :key="card.id"
                     flat
                   >
                     <q-img class="card-image" :src="card.image" />
-                    <q-card-section class="q-pb-none">
-                      <q-card-title class="card-title text-white">
+                    <q-card-section class="q-py-sm q-px-none">
+                      <q-card-title class="card-title">
                         {{ card.title }}
                       </q-card-title>
                     </q-card-section>
-                    <q-card-section
-                      class="card-price q-mx-md q-pa-none text-white"
-                    >
+                    <q-card-section class="card-price q-pa-none">
                       {{ card.price }}
                     </q-card-section>
-                    <q-card-section class="q-mb-md">
-                      <q-card-text class="text-white">
+                    <q-card-section class="q-py-xs q-pl-none">
+                      <q-card-text class="">
                         {{ card.developer }}
                       </q-card-text>
                     </q-card-section>
@@ -207,24 +200,22 @@
               <q-tab-panel name="upcoming">
                 <div class="card-container row justify-evenly">
                   <q-card
-                    class="tab-card"
+                    class="tab-card q-pa-md column justify-evenly q-mb-md"
                     v-for="card in cards"
                     :key="card.id"
                     flat
                   >
                     <q-img class="card-image" :src="card.image" />
-                    <q-card-section class="q-pb-none">
-                      <q-card-title class="card-title text-white">
+                    <q-card-section class="q-py-sm q-px-none">
+                      <q-card-title class="card-title">
                         {{ card.title }}
                       </q-card-title>
                     </q-card-section>
-                    <q-card-section
-                      class="card-price q-mx-md q-pa-none text-white"
-                    >
+                    <q-card-section class="card-price q-pa-none">
                       {{ card.price }}
                     </q-card-section>
-                    <q-card-section class="q-mb-md">
-                      <q-card-text class="text-white">
+                    <q-card-section class="q-py-xs q-pl-none">
+                      <q-card-text class="">
                         {{ card.developer }}
                       </q-card-text>
                     </q-card-section>
@@ -233,6 +224,18 @@
               </q-tab-panel>
             </q-tab-panels>
           </div>
+        </div>
+      </div>
+      <div class="footer q-pa-xl bg-dark">
+        <div>
+          <q-separator></q-separator>
+          <h3 class="text-weight-bold">bot</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
+            molestias possimus illo quos ab accusamus, excepturi rem nesciunt
+            nihil praesentium error sequi cupiditate necessitatibus, assumenda
+            minus. Dignissimos officiis cum perferendis?
+          </p>
         </div>
       </div>
     </div>
