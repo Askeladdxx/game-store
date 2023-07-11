@@ -1,83 +1,147 @@
 <template>
   <section>
-    <div class="navbar row justify-between q-mx-lg q-mt-md">
+    <div class="navbar row justify-between q-mx-lg q-pa-xs">
       <div class="flex flex-center">
-        <!-- <q-img
-        class="navbar-logo q-mr-sm"
-        src="https://scontent.fmnl9-1.fna.fbcdn.net/v/t1.15752-9/358816589_962559958161259_5649692621280805571_n.png?_nc_cat=110&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGdkrL6Ogqt72vmzmzGpAwo5TyHM5Y6kQ_lPIczljqRDxAqSbUHHqVILOsxbKVc1K2BJ6nUWqU7aF5CqdJvPRDP&_nc_ohc=V9zcfjdnu14AX_vHfil&_nc_ht=scontent.fmnl9-1.fna&oh=03_AdQ8ht69lBwLyQl9cuewDvrZKOhCbAwQHtoy70XDveXTiQ&oe=64D318C0"
-      /> -->
         <a class="logo-title text-white text-bold" href="/">bot</a>
       </div>
       <div class="flex flex-center">
         <div v-for="(navbtns, index) in navbtns" :key="index" class="q-mx-sm">
-          <q-btn dense no-caps flat class="btn-navbar q-pa-xs text-white">
+          <q-btn
+            dense
+            no-caps
+            flat
+            class="btn-navbar q-pa-xs text-white text-bold"
+            size="20px"
+          >
             {{ navbtns }}
           </q-btn>
         </div>
       </div>
     </div>
-
-    <div class="featured-container q-pa-md">
-      <h3 class="text-white q-mb-none q-ml-lg">Discover</h3>
-      <div class="featured-carousel row justify-between q-ma-md">
-        <div class="q-pa-md col-7">
-          <q-carousel
-            class="game-slides"
-            swipeable
-            animated
-            v-model="slide"
-            thumbnails
-            infinite
-            :autoplay="autoplay"
-            @mouseenter="autoplay = false"
-            @mouseleave="autoplay = true"
-          >
-            <q-carousel-slide
-              :name="1"
-              class="game-image"
-              img-src="https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/05/22/metal-gear-solid-3-remake-details-e1685006293427.jpg"
-            />
-            <q-carousel-slide
-              :name="2"
-              class="game-image"
-              img-src="https://www.devilmaycry.com/5/assets/img/common/share.png"
-            />
-            <q-carousel-slide
-              :name="3"
-              class="game-image"
-              img-src="https://media.vandal.net/i/1200x630/2-2023/202321112364948_1.jpg"
-            />
-          </q-carousel>
-        </div>
-
-        <div class="text-container col-5 q-pa-md">
-          <div>
-            <h5 class="text-title text-white text-center">
-              {{ getSlideTitle() }}
-            </h5>
+    <div class="sec-1">
+      <div class="featured-container q-mx-md q-mt-lg">
+        <div class="featured-carousel row justify-between">
+          <div class="q-pa-md col-12 col-md-7">
+            <q-carousel
+              class="game-slides"
+              swipeable
+              animated
+              v-model="slide"
+              thumbnails
+              infinite
+              :autoplay="autoplay"
+              @mouseenter="autoplay = false"
+              @mouseleave="autoplay = true"
+            >
+              <q-carousel-slide
+                :name="1"
+                class="game-image"
+                img-src="https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/05/22/metal-gear-solid-3-remake-details-e1685006293427.jpg"
+              />
+              <q-carousel-slide
+                :name="2"
+                class="game-image"
+                img-src="https://www.devilmaycry.com/5/assets/img/common/share.png"
+              />
+              <q-carousel-slide
+                :name="3"
+                class="game-image"
+                img-src="https://media.vandal.net/i/1200x630/2-2023/202321112364948_1.jpg"
+              />
+            </q-carousel>
           </div>
-          <div class="q-mx-sm">
-            <p class="content-text text-justify text-white">
-              {{ getSlideText() }}
-            </p>
-          </div>
-          <div class="featured-btn-container text-center">
-            <q-btn
-              no-caps
-              v-for="button in buttons"
-              :key="button.label"
-              :icon="button.icon"
-              :label="button.label"
-              flat
-              size="25px"
-              class="text-white q-pa-md"
-            />
+
+          <div class="text-container col-12 col-md-5 q-pa-md">
+            <div>
+              <h5 class="text-title text-white text-center q-mb-sm">
+                {{ getSlideContent().title }}
+              </h5>
+              <h5 class="text-price text-white text-center q-mt-md">
+                {{ getSlideContent().price }}
+              </h5>
+            </div>
+            <div class="q-mx-sm">
+              <p class="content-text text-justify text-white">
+                {{ getSlideContent().text }}
+              </p>
+            </div>
+            <div class="featured-btn-container text-center">
+              <q-btn
+                no-caps
+                v-for="button in buttons"
+                :key="button.label"
+                :icon="button.icon"
+                :label="button.label"
+                flat
+                rounded
+                size="20px"
+                class="text-white q-pa-md"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <section>
+    <div class="sec-2">
+      <div class="q-pa-sm q-mx-md">
+        <h4 class="text-white q-mb-none q-mt-sm">Games on Sale</h4>
+      </div>
+      <div class="card-container row justify-evenly">
+        <q-card
+          class="my-card q-ma-sm"
+          v-for="card in cards"
+          :key="card.id"
+          flat
+        >
+          <q-img class="card-image" :src="card.image" />
+          <q-card-section class="q-pb-none">
+            <q-card-title class="card-title text-white">
+              {{ card.title }}
+            </q-card-title>
+          </q-card-section>
+          <q-card-section class="card-price q-mx-md q-pa-none text-white">
+            {{ card.price }}
+          </q-card-section>
+          <q-card-section class="q-mb-md">
+            <q-card-text class="text-white">
+              {{ card.developer }}
+            </q-card-text>
+          </q-card-section>
+        </q-card>
+      </div>
+      <div class="free-container q-pa-sm q-mx-md">
+        <h5 class="text-white q-my-none">Free games on <b>bot</b></h5>
+
+        <div class="card-container row justify-evenly">
+          <q-card
+            class="free-card q-ma-sm"
+            v-for="card in freeCards"
+            :key="card.id"
+            flat
+          >
+            <q-img class="card-image" :src="card.image" />
+            <q-card-section class="q-pb-none">
+              <q-card-title class="card-title text-white">
+                {{ card.title }}
+              </q-card-title>
+            </q-card-section>
+            <q-card-section class="card-price q-mx-md q-pa-none text-white">
+              {{ card.price }}
+            </q-card-section>
+            <q-card-section class="q-mb-md">
+              <q-card-text class="text-white">
+                {{ card.developer }}
+              </q-card-text>
+            </q-card-section>
+          </q-card>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
+
 <style lang="scss">
 @import "./style/homePage.scss";
 </style>
