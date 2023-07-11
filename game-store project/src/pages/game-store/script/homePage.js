@@ -55,8 +55,8 @@ export default {
         
       ],
       freeCards: [
-        { id: 1,image: 'https://cdn.mos.cms.futurecdn.net/GZKU994Jzrz4T5H4sfBUSW.jpg', title: "Assassin's Creed: Mirage",price: '$29.99', developer: "Ubisoft" },
-        { id: 2,image: 'https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2023/02/re4.jpg?fit=830%2C535&ssl=1', title: 'Resident Evil 4: Remake',price: '$29.99', developer: 'Capcom' },
+        { id: 1,image: 'https://cdn.mos.cms.futurecdn.net/GZKU994Jzrz4T5H4sfBUSW.jpg', title: "Assassin's Creed: Mirage",price: 'Play For Free', developer: "Ubisoft" },
+        { id: 2,image: 'https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2023/02/re4.jpg?fit=830%2C535&ssl=1', title: 'Resident Evil 4: Remake',price: 'Play For Free', developer: 'Capcom' },
 
       ]
     };

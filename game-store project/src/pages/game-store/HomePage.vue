@@ -90,7 +90,7 @@
       </div>
       <div class="card-container row justify-evenly">
         <q-card
-          class="my-card q-ma-sm"
+          class="my-card q-pa-md"
           v-for="card in cards"
           :key="card.id"
           flat
@@ -112,7 +112,10 @@
         </q-card>
       </div>
       <div class="free-container q-pa-sm q-mx-md">
-        <h5 class="text-white q-my-none">Free games on <b>bot</b></h5>
+        <h5 class="text-white q-ma-md">
+          <q-icon name="redeem" size="2rem" class="q-px-md" />Free games on
+          <b>bot</b>
+        </h5>
 
         <div class="card-container row justify-evenly">
           <q-card
@@ -121,8 +124,8 @@
             :key="card.id"
             flat
           >
-            <q-img class="card-image" :src="card.image" />
-            <q-card-section class="q-pb-none">
+            <q-img class="free-card-image" :src="card.image" />
+            <q-card-section class="q-pa-md">
               <q-card-title class="card-title text-white">
                 {{ card.title }}
               </q-card-title>
@@ -131,7 +134,7 @@
               {{ card.price }}
             </q-card-section>
             <q-card-section class="q-mb-md">
-              <q-card-text class="text-white">
+              <q-card-text class="text-white q-py-none">
                 {{ card.developer }}
               </q-card-text>
             </q-card-section>

@@ -68,7 +68,22 @@ section {
   background-color: #1d267d;
   border-radius: 15px;
   .free-card {
-    height: 20%;
-    width: 600px;
+    border-radius: 10px;
+    background-color: #0c134f;
+    width: 900px;
+    .free-card-image {
+      height: 25vh;
+    }
+  }
+}
+@media (min-width: 600px) {
+  .free-card {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .free-card {
+    max-width: 33.33%;
   }
 }
