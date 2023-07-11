@@ -18,8 +18,8 @@
         </div>
       </div>
     </div>
-    <div class="sec-1">
-      <div class="featured-container q-mx-md q-mt-lg">
+    <div class="sec-1 q-pa-md">
+      <div class="featured-container q-mx-md q-pa-md">
         <div class="featured-carousel row justify-between">
           <div class="q-pa-md col-12 col-md-7">
             <q-carousel
@@ -140,6 +140,99 @@
               </q-card-text>
             </q-card-section>
           </q-card>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-3 q-pa-md">
+      <div class="q-pa-md">
+        <div style="min-width: 100vh">
+          <q-tabs
+            v-model="tab"
+            align="justify"
+            narrow-indicator
+            class="q-mb-lg"
+          >
+            <q-tab
+              no-caps
+              class="text-white"
+              name="popularRelease"
+              label="Popular New Releases"
+            />
+            <q-tab
+              class="text-white"
+              name="upcoming"
+              label="Upcoming"
+              no-caps
+            />
+          </q-tabs>
+
+          <div class="q-gutter-y-sm">
+            <q-tab-panels
+              v-model="tab"
+              animated
+              transition-prev="scale"
+              transition-next="scale"
+              class="tab-panel-container text-white"
+            >
+              <q-tab-panel name="popularRelease">
+                <div class="card-container row justify-evenly">
+                  <q-card
+                    class="tab-card"
+                    v-for="card in cards"
+                    :key="card.id"
+                    flat
+                  >
+                    <q-img class="card-image" :src="card.image" />
+                    <q-card-section class="q-pb-none">
+                      <q-card-title class="card-title text-white">
+                        {{ card.title }}
+                      </q-card-title>
+                    </q-card-section>
+                    <q-card-section
+                      class="card-price q-mx-md q-pa-none text-white"
+                    >
+                      {{ card.price }}
+                    </q-card-section>
+                    <q-card-section class="q-mb-md">
+                      <q-card-text class="text-white">
+                        {{ card.developer }}
+                      </q-card-text>
+                    </q-card-section>
+                  </q-card>
+                </div>
+              </q-tab-panel>
+
+              <q-tab-panel name="upcoming">
+                <div class="card-container row justify-evenly">
+                  <q-card
+                    class="tab-card"
+                    v-for="card in cards"
+                    :key="card.id"
+                    flat
+                  >
+                    <q-img class="card-image" :src="card.image" />
+                    <q-card-section class="q-pb-none">
+                      <q-card-title class="card-title text-white">
+                        {{ card.title }}
+                      </q-card-title>
+                    </q-card-section>
+                    <q-card-section
+                      class="card-price q-mx-md q-pa-none text-white"
+                    >
+                      {{ card.price }}
+                    </q-card-section>
+                    <q-card-section class="q-mb-md">
+                      <q-card-text class="text-white">
+                        {{ card.developer }}
+                      </q-card-text>
+                    </q-card-section>
+                  </q-card>
+                </div>
+              </q-tab-panel>
+            </q-tab-panels>
+          </div>
         </div>
       </div>
     </div>

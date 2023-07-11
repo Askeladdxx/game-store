@@ -26,6 +26,7 @@ export default {
           };
         default:
           return {
+           
             title: "",
             text: "",
             price: ""
@@ -34,6 +35,7 @@ export default {
     };
 
     return {
+      tab: ref('popularRelease'),
       slide,
       autoplay,
       getSlideContent,
@@ -55,7 +57,7 @@ export default {
         
       ],
       freeCards: [
-        { id: 1,image: 'https://cdn.mos.cms.futurecdn.net/GZKU994Jzrz4T5H4sfBUSW.jpg', title: "Assassin's Creed: Mirage",price: 'Play For Free', developer: "Ubisoft" },
+        { id: 1,image: 'https://www.superherohype.com/wp-content/uploads/sites/4/2023/06/Spider-Man-2-PS5.jpg?resize=1200,630', title: "Spider-Man 2",price: 'Play For Free', developer: "Insomniac Games" },
         { id: 2,image: 'https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2023/02/re4.jpg?fit=830%2C535&ssl=1', title: 'Resident Evil 4: Remake',price: 'Play For Free', developer: 'Capcom' },
 
       ]

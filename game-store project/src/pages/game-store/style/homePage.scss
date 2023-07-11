@@ -51,7 +51,7 @@ section {
   .my-card {
     background-color: #0c134f;
     border-radius: 15px;
-    width: 280px;
+    width: 250px;
     height: 100%;
     .card-image {
       height: 180px;
@@ -76,6 +76,35 @@ section {
     }
   }
 }
+.sec-3 {
+  .tab-header {
+    font-size: 100px;
+  }
+  .tab-panel-container {
+    background-color: #0c134f;
+  }
+  .tab-card {
+    background-color: #0c134f;
+    border-radius: 15px;
+    width: 250px;
+    height: 100%;
+    .tab-header {
+      .q-tab__panel {
+        font-size: larger !important;
+      }
+    }
+    .card-image {
+      height: 180px;
+    }
+    .card-title {
+      font-size: 20px;
+    }
+    .card-price {
+      font-size: 18px;
+    }
+  }
+}
+
 @media (min-width: 600px) {
   .free-card {
     max-width: 50%;
