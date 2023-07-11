@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #0c134f;
+}
+
+section {
+  min-height: 100vh;
+}
+.navbar {
+  .logo-title {
+    font-size: 50px;
+    text-decoration: none;
+  }
+  .nav-title {
+    text-decoration: none;
+  }
+  .navbar-logo {
+    height: 50px;
+    width: 50px;
+  }
+}
+.featured-container {
+  border-radius: 0px 0 15px 15px;
+  .featured-carousel {
+    background-color: #1d267d;
+    border-radius: 15px;
+  }
+  .game-slides {
+    border-radius: 15px;
+    height: 700px;
+  }
+  .text-container {
+    .text-price,
+    .text-title {
+      font-size: 35px;
+    }
+    .text-price {
+      color: yellowgreen !important;
+    }
+    font-size: 25px;
+  }
+}
+.container-2 {
+  background-color: #1d267d;
+  border-radius: 15px;
+}
+.card-container {
+  .my-card {
+    background-color: #0c134f;
+    border-radius: 15px;
+    width: 280px;
+    height: 100%;
+    .card-image {
+      height: 180px;
+    }
+    .card-title {
+      font-size: 20px;
+    }
+    .card-price {
+      font-size: 18px;
+    }
+  }
+}
+.free-container {
+  background-color: #1d267d;
+  border-radius: 15px;
+  .free-card {
+    border-radius: 10px;
+    background-color: #0c134f;
+    width: 900px;
+    .free-card-image {
+      height: 25vh;
+    }
+  }
+}
+@media (min-width: 600px) {
+  .free-card {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .free-card {
+    max-width: 33.33%;
+  }
+}
