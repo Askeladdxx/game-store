@@ -95,7 +95,8 @@
       </div>
       <div class="card-container row justify-evenly">
         <q-card
-          class="my-card q-pa-md q-mb-md"
+          v-ripple
+          class="my-card q-pa-md q-mb-md cursor-pointer q-hoverable"
           v-for="card in cards"
           :key="card.id"
           dense
@@ -124,10 +125,11 @@
 
         <div class="card-container row justify-evenly">
           <q-card
-            class="free-card"
+            v-ripple
+            class="free-card cursor-pointer q-hoverable"
             v-for="card in freeCards"
             :key="card.id"
-            flat
+            dense
           >
             <q-img class="free-card-image" :src="card.image" />
             <q-card-section class="q-pa-md">
@@ -185,7 +187,8 @@
             <q-tab-panel name="popularRelease">
               <div class="card-container row justify-evenly">
                 <q-card
-                  class="tab-card q-pa-md column justify-evenly"
+                  v-ripple
+                  class="tab-card q-pa-md cursor-pointer q-hoverable q-ma-xs"
                   v-for="card in cards"
                   :key="card.id"
                   flat
