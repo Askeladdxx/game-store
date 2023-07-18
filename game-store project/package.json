@@ -2,7 +2,7 @@
   "name": "game-store-project",
   "version": "0.0.1",
   "description": "An online game shop",
-  "productName": "Quasar App",
+  "productName": "Bot Game Store",
   "author": "Joshua Yves Edellon <joshuadellon.jye@gmail.com>",
   "private": true,
   "scripts": {
