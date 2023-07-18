@@ -10,18 +10,19 @@ section {
   min-height: 100vh;
   margin: auto;
 }
+p {
+  color: #ffffff;
+}
 .navbar {
   margin-top: 15px;
   border-radius: 15px;
   background-color: #1e1e1e;
   color: #ffffff;
-  .logo-title {
-    font-size: 50px;
-    text-decoration: none;
-  }
+
   .logo-title {
     text-decoration: none;
     color: #ffffff;
+    font-size: 50px;
   }
   .navbar-logo {
     height: 50px;
@@ -153,6 +154,31 @@ section {
   color: #ffffff;
   .q-separator {
     background-color: #ffffff;
+  }
+}
+
+.sec-4 {
+  background-color: #111111;
+  border-radius: 15px;
+  .category-card-container {
+    background-color: #111111;
+
+    .category-cards {
+      background-color: #1e1e1e;
+      width: 500px;
+      height: 200px;
+      .card-image {
+        height: 16vh;
+        width: 12vh;
+      }
+      .card-game-category {
+        font-size: 10px;
+        .category-actions {
+          background-color: #3c3c3c;
+          border-radius: 5px;
+        }
+      }
+    }
   }
 }
 

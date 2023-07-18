@@ -240,7 +240,69 @@
             </q-tab-panels>
           </div>
         </div>
-        <div class="footer q-pa-md">
+      </div>
+    </section>
+    <section>
+      <div class="sec-4 row q-col-gutter-x-xl q-mx-md justify-center">
+        <div v-for="headers in categoryHeader" :key="headers" class="col-4">
+          <div class="q-pa-md">
+            <h3 class="text-white">{{ headers }}</h3>
+
+            <div class="category-card-container">
+              <q-card
+                v-ripple
+                class="category-cards q-pa-md column justify-evenly q-mb-md text-white cursor-pointer q-hoverable"
+                v-for="card in categoryCards"
+                :key="card.id"
+                flat
+              >
+                <div class="flex q-pa-md">
+                  <div class="q-pa-md">
+                    <q-img class="card-image" :src="card.image" />
+                  </div>
+                  <div class="q-mt-lg">
+                    <q-card-section class="q-py-sm q-px-none">
+                      <q-card-title class="card-title">
+                        {{ card.title }}
+                      </q-card-title>
+                    </q-card-section>
+                    <q-card-section class="card-price q-pa-none">
+                      {{ card.price }}
+                    </q-card-section>
+                    <q-card-section class="q-py-xs q-pl-none">
+                      <q-card-text class="card-developer">
+                        {{ card.developer }}
+                      </q-card-text>
+                    </q-card-section>
+                    <q-card-section
+                      class="q-pt-xs q-pl-none card-game-category"
+                    >
+                      <p>Category:</p>
+                      <q-card-text
+                        v-for="category in card.gameCategory"
+                        :key="category"
+                        class="q-pa-xs q-mr-sm category-actions"
+                      >
+                        {{ category }}
+                      </q-card-text>
+                    </q-card-section>
+                  </div>
+                </div>
+              </q-card>
+            </div>
+            <div class="view-more">
+              <q-btn
+                color="dark"
+                icon="keyboard_arrow_right"
+                label="View more"
+                @click="onClick"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="footer q-pa-md">
           <div>
             <h3 class="text-weight-bold q-mb-sm">bot</h3>
             <q-separator />
@@ -256,9 +318,7 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </div> -->
   </div>
 </template>
 
