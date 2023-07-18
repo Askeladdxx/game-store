@@ -291,12 +291,11 @@
               </q-card>
             </div>
             <div class="view-more">
-              <q-btn
-                color="dark"
-                icon="keyboard_arrow_right"
-                label="View more"
-                @click="onClick"
-              />
+              <q-btn color="white" flat @click="onClick" label="View more">
+                <div class="q-gutter-xs">
+                  <q-icon name="keyboard_arrow_right" />
+                </div>
+              </q-btn>
             </div>
           </div>
         </div>
