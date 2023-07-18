@@ -275,23 +275,26 @@
                       </q-card-text>
                     </q-card-section>
                     <q-card-section
-                      class="q-pt-xs q-pl-none card-game-category"
+                      class="q-pt-xs q-pb-xs q-pl-none card-game-category"
                     >
-                      <p>Category:</p>
-                      <q-card-text
+                      <p class="q-mb-xs">Category:</p>
+                      <q-btn
+                        flat
+                        no-caps
+                        size="sm"
                         v-for="category in card.gameCategory"
                         :key="category"
                         class="q-pa-xs q-mr-sm category-actions"
                       >
                         {{ category }}
-                      </q-card-text>
+                      </q-btn>
                     </q-card-section>
                   </div>
                 </div>
               </q-card>
             </div>
             <div class="view-more">
-              <q-btn color="white" flat @click="onClick" label="View more">
+              <q-btn color="dark" flat @click="onClick" label="View more">
                 <div class="q-gutter-xs">
                   <q-icon name="keyboard_arrow_right" />
                 </div>
