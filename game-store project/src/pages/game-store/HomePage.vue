@@ -92,7 +92,7 @@
     <section>
       <div class="sec-2 q-ma-md">
         <div class="q-pa-sm q-mx-md">
-          <h4 class="q-mx-md text-white">Games on Sale</h4>
+          <h4 class="q-mx-md q-my-sm text-white">Games on Sale</h4>
         </div>
         <div class="card-container row justify-evenly">
           <q-card
@@ -118,8 +118,8 @@
             </q-card-section>
           </q-card>
         </div>
-        <div class="free-container q-pa-md q-ma-md">
-          <h4 class="q-mx-md q-my-sm text-white">
+        <div class="free-container q-pa-md">
+          <h4 class="q-mx-md q-my-xs text-white">
             <q-icon name="redeem" size="2rem" class="q-pa-md" />Free games on
             <b>bot</b>
           </h4>
@@ -294,7 +294,7 @@
               </q-card>
             </div>
             <div class="view-more">
-              <q-btn color="dark" flat @click="onClick" label="View more">
+              <q-btn color="white" flat @click="onClick" label="View more">
                 <div class="q-gutter-xs">
                   <q-icon name="keyboard_arrow_right" />
                 </div>
@@ -304,23 +304,42 @@
         </div>
       </div>
     </section>
-    <!-- <div class="footer q-pa-md">
-          <div>
-            <h3 class="text-weight-bold q-mb-sm">bot</h3>
-            <q-separator />
-            <div class="column justify-center">
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Dolores molestias possimus illo quos ab accusamus, excepturi
-                  rem nesciunt nihil praesentium error sequi cupiditate
-                  necessitatibus, assumenda minus. Dignissimos officiis cum
-                  perferendis?
-                </p>
-              </div>
-            </div>
+    <div class="footer q-pa-md q-mt-xl">
+      <div>
+        <h3 class="text-weight-bold q-mb-sm">bot</h3>
+        <q-separator />
+        <div class="row q-col-gutter-x-md justify-center">
+          <div class="col-4 q-pa-md">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
+              molestias possimus illo quos ab accusamus, excepturi rem nesciunt
+              nihil praesentium error sequi cupiditate necessitatibus, assumenda
+              minus. Dignissimos officiis cum perferendis?
+            </p>
+
+            <a href="" class="links">About Bot</a>
           </div>
-        </div> -->
+          <div class="col-4 q-pa-md">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
+              molestias possimus illo quos ab accusamus, excepturi rem nesciunt
+              nihil praesentium error sequi cupiditate necessitatibus, assumenda
+              minus. Dignissimos officiis cum perferendis?
+            </p>
+            <a href="" class="links">Contacts</a>
+          </div>
+          <div class="col-4 q-pa-md">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
+              molestias possimus illo quos ab accusamus, excepturi rem nesciunt
+              nihil praesentium error sequi cupiditate necessitatibus, assumenda
+              minus. Dignissimos officiis cum perferendis?
+            </p>
+            <a href="" class="links">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

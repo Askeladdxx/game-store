@@ -149,13 +149,6 @@ p {
     }
   }
 }
-.footer {
-  background-color: #1e1e1e;
-  color: #ffffff;
-  .q-separator {
-    background-color: #ffffff;
-  }
-}
 
 .sec-4 {
   background-color: #111111;
@@ -179,6 +172,21 @@ p {
         }
       }
     }
+  }
+}
+.footer {
+  background-color: #1e1e1e;
+  color: #c9d6df;
+  .q-separator {
+    background-color: #ffffff;
+  }
+  .links {
+    font-size: 18px;
+    color: #c9d6df;
+    text-decoration: none;
+  }
+  .links:hover {
+    color: #ffffff !important;
   }
 }
 
