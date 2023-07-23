@@ -14,7 +14,7 @@ p {
   color: #ffffff;
 }
 .navbar {
-  margin-top: 15px;
+  margin: 15px;
   border-radius: 15px;
   background-color: #1e1e1e;
   color: #ffffff;
@@ -30,150 +30,6 @@ p {
   }
 }
 
-.featured-container {
-  background-color: #1e1e1e;
-  border-radius: 15px;
-  .featured-btn-container {
-    color: #fff;
-    .featured-btn {
-      background-color: #1e1e1e;
-    }
-  }
-  .featured-carousel {
-    border-radius: 15px;
-  }
-  .game-slides {
-    border-radius: 15px;
-    height: 700px;
-  }
-  .text-container {
-    border-radius: 15px;
-    font-size: 25px;
-    .text-price,
-    .text-title {
-      font-size: 35px;
-    }
-    .text-price {
-      color: #c9d6df !important;
-    }
-    .text-title,
-    .content-text {
-      color: #fff;
-    }
-  }
-}
-.sec-2 {
-  background-color: #111111;
-  border-radius: 15px;
-  .card-container {
-    .my-card {
-      background-color: #1e1e1e;
-      color: #fff;
-      border-radius: 15px;
-      width: 250px;
-      height: 100%;
-      .card-image {
-        height: 180px;
-      }
-      .card-title {
-        font-size: 17px;
-      }
-      .card-price {
-        font-size: 17px;
-      }
-    }
-  }
-  .free-container {
-    border-radius: 15px;
-    .free-card {
-      background-color: #1e1e1e;
-      .card-title {
-        font-size: x-large;
-      }
-      .card-price {
-        font-size: large;
-      }
-      .card-developer {
-        font-size: large;
-        color: #bbbbbb;
-      }
-      color: #fff;
-      border-radius: 10px;
-      width: 40vh;
-      .free-card-image {
-        height: 40vh;
-        border-radius: 15px;
-      }
-      .claim-btn {
-        background-color: #3c3c3c;
-      }
-    }
-  }
-}
-.sec-3 {
-  background-color: #111111;
-  border-radius: 15px;
-  .tab {
-    color: #ffffff;
-    .q-tab__label {
-      font-size: x-large;
-    }
-  }
-  .tab-header {
-    font-size: 100px;
-  }
-  .tab-panel-container {
-    background-color: #1e1e1e;
-    border-radius: 15px;
-  }
-  .tab-card {
-    background-color: #1e1e1e;
-
-    width: 250px;
-    height: 100%;
-    .tab-header {
-      .q-tab__panel {
-        font-size: larger !important;
-      }
-    }
-    .card-image {
-      height: 180px;
-    }
-    .card-title,
-    .card-price {
-      font-size: 17px;
-      color: #ffffff;
-    }
-    .card-developer {
-      color: #bbbbbb;
-    }
-  }
-}
-
-.sec-4 {
-  background-color: #111111;
-  border-radius: 15px;
-  .category-card-container {
-    background-color: #111111;
-
-    .category-cards {
-      background-color: #1e1e1e;
-      width: 500px;
-      height: 200px;
-      .card-image {
-        height: 16vh;
-        width: 12vh;
-      }
-      .card-game-category {
-        font-size: 10px;
-        .category-actions {
-          background-color: #3c3c3c;
-          border-radius: 5px;
-        }
-      }
-    }
-  }
-}
 .footer {
   background-color: #1e1e1e;
   color: #c9d6df;
@@ -187,17 +43,5 @@ p {
   }
   .links:hover {
     color: #ffffff !important;
-  }
-}
-
-@media (min-width: 600px) {
-  .free-card {
-    max-width: 50%;
-  }
-}
-
-@media (min-width: 900px) {
-  .free-card {
-    max-width: 33.33%;
   }
 }
