@@ -48,6 +48,7 @@ export default {
   },
   data() {
     return {
+      categoryHeader: ["Top Sellers", "Popular", "Specials"],
       navbtns: ["Discover", "Browse", "Wishlist", "Cart"],
       buttons: [
         { icon: "library_add", label: "Wishlist" },
@@ -191,6 +192,44 @@ export default {
           title: "Resident Evil 4: Remake",
           price: "Play For Free",
           developer: "Capcom",
+        },
+      ],
+      categoryCards: [
+        {
+          id: 1,
+          image:
+            "https://www.superherohype.com/wp-content/uploads/sites/4/2023/06/Spider-Man-2-PS5.jpg?resize=1200,630",
+          title: "Spider-Man 2",
+          price: "Play For Free",
+          developer: "Insomniac Games",
+          gameCategory: ["Action", "Adventure", "Single Player"],
+        },
+        {
+          id: 2,
+          image:
+            "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2023/02/re4.jpg?fit=830%2C535&ssl=1",
+          title: "Resident Evil 4: Remake",
+          price: "Play For Free",
+          developer: "Capcom",
+          gameCategory: ["Action", "Adventure", "Single Player"],
+        },
+        {
+          id: 3,
+          image:
+            "https://www.superherohype.com/wp-content/uploads/sites/4/2023/06/Spider-Man-2-PS5.jpg?resize=1200,630",
+          title: "Spider-Man 2",
+          price: "Play For Free",
+          developer: "Insomniac Games",
+          gameCategory: ["Action", "Adventure", "Single Player"],
+        },
+        {
+          id: 4,
+          image:
+            "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2023/02/re4.jpg?fit=830%2C535&ssl=1",
+          title: "Resident Evil 4: Remake",
+          price: "Play For Free",
+          developer: "Capcom",
+          gameCategory: ["Action", "Adventure", "Single Player"],
         },
       ],
     };
