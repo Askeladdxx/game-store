@@ -8,13 +8,11 @@ body {
 
 section {
   min-height: 100vh;
-  margin: auto;
 }
 p {
   color: #ffffff;
 }
 .navbar {
-  margin: 15px;
   border-radius: 15px;
   background-color: #1e1e1e;
   color: #ffffff;
@@ -43,5 +41,26 @@ p {
   }
   .links:hover {
     color: #ffffff !important;
+  }
+}
+
+.fade-in-element,
+.fade-in-element2,
+.fade-in-element3 {
+  opacity: 0;
+}
+.fade-in-element {
+  animation: fadeIn 1.5s ease-in forwards;
+}
+.fade-in-element2 {
+  animation: fadeIn 2s ease-in forwards;
+}
+.fade-in-element3 {
+  animation: fadeIn 3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
