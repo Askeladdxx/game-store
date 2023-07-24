@@ -6,15 +6,18 @@
           <a class="logo-title text-bold" href="/">bot</a>
         </div>
         <div class="flex flex-center q-mr-md">
-          <div v-for="(navbtns, index) in navbtns" :key="index" class="q-mx-sm">
+          <div class="navbtn-containers">
             <q-btn
+              v-for="button in navbuttons"
+              :key="button.label"
               dense
               no-caps
               flat
-              class="btn-navbar q-pa-xs text-bold"
+              class="btn-navbar q-pa-xs text-bold q-mx-md"
               size="20px"
+              :to="button.route"
             >
-              {{ navbtns }}
+              {{ button.label }}
             </q-btn>
           </div>
         </div>

@@ -49,7 +49,12 @@ export default {
   data() {
     return {
       categoryHeader: ["Top Sellers", "Popular", "Specials"],
-      navbtns: ["Discover", "Browse", "Wishlist", "Cart"],
+      navbuttons: [
+        { label: "Home", route: "/" },
+        { label: "Discover", route: "/discover" },
+        { label: "Browse", route: "/browser" },
+        { label: "About bot", route: "/about" },
+      ],
       buttons: [
         { icon: "library_add", label: "Wishlist" },
         { icon: "shopping_cart", label: "Add to cart" },
